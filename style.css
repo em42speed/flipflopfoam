@@ -184,6 +184,10 @@ div.desc {
      text-align: center;
 }
 
+.container li {
+     list-style: none;
+}
+
 .video-container {
      display: flex;
      justify-content: center;
