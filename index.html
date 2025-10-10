@@ -20,8 +20,9 @@
         <nav>
             <ul>
             <li class="dropdown">
-                <a href="../index.html" class="dropbtn">Blasters</a>
+                <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Blasters</button>
                 <div class="dropdown-content">
+                    <a href="../index.html">All Blasters</a>
                     <a href="blasters/shrew.html">Shrew</a>
                     <a href="blasters/falx.html">Falx</a>
                     <a href="blasters/goblin.html">Goblin</a>
@@ -211,6 +212,39 @@
 
 
 </body>
+<script>
+// Mobile-friendly dropdown toggle
+document.addEventListener('DOMContentLoaded', function () {
+    var dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(function (dd) {
+        var btn = dd.querySelector('.dropbtn');
+        var menu = dd.querySelector('.dropdown-content');
+        if (!btn || !menu) return;
+
+        btn.addEventListener('click', function (e) {
+            var isOpen = dd.classList.toggle('open');
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            e.stopPropagation();
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', function () {
+            if (dd.classList.contains('open')) {
+                dd.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', function (ev) {
+            if (ev.key === 'Escape') {
+                dd.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+});
+</script>
 <footer>
 
 </footer>

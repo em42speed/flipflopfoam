@@ -72,6 +72,28 @@ nav a:hover,
      padding: 0.5rem 1rem;
 }
 
+/* When toggled via JS mark the dropdown open */
+.dropdown.open .dropdown-content {
+     display: block;
+}
+
+/* Mobile-specific: make dropdown full-width and position static so it pushes content instead of overlapping */
+@media (max-width: 600px) {
+     .dropdown-content {
+          position: static;
+          box-shadow: none;
+          border-top: 1px solid #ddd;
+          min-width: 100%;
+     }
+     .dropdown {
+          width: 100%;
+     }
+     .dropbtn {
+          width: 100%;
+          text-align: left;
+     }
+}
+
 h1,
 h2,
 h3,
