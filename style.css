@@ -105,6 +105,8 @@ main {
 div.gallery {
      border: 1px solid #ccc;
      border-radius: 6px;
+     width: 75%;
+     margin: auto;
      overflow: hidden;
      background: #fff;
 }
@@ -188,6 +190,9 @@ div.desc {
      }
      .blaster_container {
           grid-template-columns: repeat(2, 1fr);
+     }
+     div.gallery {
+          width: 95%;
      }
 }
 
