@@ -43,6 +43,8 @@ nav a,
      padding: 0.5rem 0.75rem;
      display: inline-block;
      border-radius: 4px;
+     border-color: lightgrey;
+     font-family: rockwell;
 }
 
 nav a:hover,
@@ -214,6 +216,9 @@ div.desc {
           grid-template-columns: repeat(2, 1fr);
      }
      div.gallery {
+          width: 95%;
+     }
+     div.video-container {
           width: 95%;
      }
 }
