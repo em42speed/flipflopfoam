@@ -105,8 +105,8 @@ main {
 div.gallery {
      border: 1px solid #ccc;
      border-radius: 6px;
-     width: 75%;
-     margin: auto;
+     width: 100%;
+     margin: 0;
      overflow: hidden;
      background: #fff;
 }
@@ -129,7 +129,7 @@ div.desc {
 .blaster_container {
      display: grid;
      gap: 0.75rem;
-     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
      align-items: start;
      margin: 0.75rem 0;
 }
