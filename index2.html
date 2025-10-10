@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <link href="./style.css" rel="stylesheet" />
+    <title>Home | Flip Flop Foam</title>
+</head>
+</body>
+<script>
+// Mobile-friendly dropdown toggle (shared)
+document.addEventListener('DOMContentLoaded', function () {
+    var dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(function (dd) {
+        var btn = dd.querySelector('.dropbtn');
+        var menu = dd.querySelector('.dropdown-content');
+        if (!btn || !menu) return;
+
+        btn.addEventListener('click', function (e) {
+            var isOpen = dd.classList.toggle('open');
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            e.stopPropagation();
+        });
+
+        document.addEventListener('click', function () {
+            if (dd.classList.contains('open')) {
+                dd.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        document.addEventListener('keydown', function (ev) {
+            if (ev.key === 'Escape') {
+                dd.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+});
+</script>
+<footer>
+</footer>
+</html>
+                <li><a href="nerf.html">Blasters</a></li>
+                <li><a href="mods.html">Mods</a></li>
+                <li><a href="not-nerf.html">Not Nerf</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero">
+        <h1 id="title">Flip Flop Foam Factory</h1>
+    </div>
+    <div>
+
+    </div>
+    <div id="featured">
+
+    </div>
+
+
+
+</body>
+<footer>
+
+</footer>
+</html>
