@@ -1,75 +1,75 @@
-body {
-     max-width: 100%;
-     overflow-x: auto;
-     margin: 2rem 2rem;
+/* Responsive base breakpoints and fluid typography */
+:root {
+     /* base font size scales slightly on small screens */
+     font-size: 16px;
 }
 
-nav ul {
-     list-style-type: none;
-     margin: 0;
+@media (max-width: 900px) {
+     :root {
+          font-size: 15px;
+     }
+}
+
+@media (max-width: 600px) {
+     :root {
+          font-size: 14px;
+     }
+}
+
+body {
+     max-width: 100%;
+     overflow-x: hidden;
+     margin: 1rem;
      padding: 0;
      overflow: hidden;
      font-family: rockwell;
      background-color: #f1f1f1;
 }
 
-nav li {
-     float: left;
+nav ul {
+     list-style: none;
+     margin: 0;
+     padding: 0.25rem;
+     display: flex;
+     gap: 0.5rem;
+     align-items: center;
+     flex-wrap: wrap;
 }
 
-nav li a,
+nav a,
 .dropbtn {
-     display: inline-block;
      color: fuchsia;
-     text-align: center;
-     padding: 14px 16px;
      text-decoration: none;
-}
-
-nav li a:hover,
-.dropdown:hover .dropbtn {
-     background-color: lightgrey;
-}
-
-nav li.dropdown {
+     padding: 0.5rem 0.75rem;
      display: inline-block;
+     border-radius: 4px;
 }
 
+nav a:hover,
+.dropbtn:hover {
+     background: lightgrey;
+}
+
+/* Simple dropdown fallback for small screens: keep it inline */
+.dropdown {
+     position: relative;
+}
 .dropdown-content {
      display: none;
      position: absolute;
-     background-color: #f9f9f9;
+     top: 100%;
+     left: 0;
+     background: #f9f9f9;
      min-width: 160px;
-     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-     z-index: 1;
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+     z-index: 10;
 }
-
-.dropdown-content a {
-     color: fuchsia;
-     padding: 12px 16px;
-     text-decoration: none;
-     display: block;
-     text-align: left;
-}
-
-.dropdown-content a:hover {
-     background-color: #f1f1f1;
-}
-
 .dropdown:hover .dropdown-content {
      display: block;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-li {
-     margin: auto;
-     padding-top: 0.5rem;
-     max-width: 100%;
+.dropdown-content a {
+     display: block;
+     padding: 0.5rem 1rem;
 }
 
 h1,
@@ -77,83 +77,63 @@ h2,
 h3,
 h4,
 h5 {
-     font-family: rockwell;
      color: fuchsia;
+     margin: 0.5rem 0;
 }
-
 h1 {
-     margin: auto;
-     margin-top: 1rem;
-     border-bottom: 2px dotted black;
-     padding: 1rem;
-     max-height: 10rem;
+     font-size: 2.25rem;
      text-align: center;
-     font-size: 3rem;
+     padding: 0.75rem;
+     border-bottom: 2px dotted #000;
 }
-
 h2 {
-     border-bottom: 2px dotted black;
-     padding: 1.5rem;
-     margin-bottom: 1rem;
+     font-size: 1.5rem;
      text-align: center;
-     font-size: 2rem;
+     padding: 0.5rem 0;
+     border-bottom: 2px dotted #000;
 }
-
 p {
-     padding-left: 1rem;
-     padding-right: 1rem;
+     margin: 0.5rem 0;
+     font-family: Arial, Helvetica, sans-serif;
 }
 
 main {
-     margin: 1.5rem auto;
-     max-width: 90%;
-     overflow-x: auto;
-     line-height: 1.5;
+     margin: 1rem auto;
+     max-width: 1200px;
 }
 
 div.gallery {
      border: 1px solid #ccc;
-     margin: 1rem auto;
-     width: 80%;
+     border-radius: 6px;
+     overflow: hidden;
+     background: #fff;
 }
-
-div.gallery:hover {
-     border: 1px solid #777;
-}
-
 div.gallery img {
+     display: block;
      width: 100%;
      height: auto;
 }
-
 div.desc {
-     padding: 15px;
+     padding: 0.5rem;
      text-align: center;
-     font-family: rockwell;
-     font-size: 1.5rem;
+     font-size: 1rem;
 }
 
 * {
      box-sizing: border-box;
 }
 
+/* Replace float layout with a responsive grid */
+.blaster_container {
+     display: grid;
+     gap: 0.75rem;
+     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+     align-items: start;
+     margin: 0.75rem 0;
+}
+
 .responsive {
-     padding: 5px 5px;
-     float: left;
-     width: 45%;
-}
-
-@media only screen and (max-width: 700px) {
-     .responsive {
-          width: 49.99999%;
-          margin: 6px 0;
-     }
-}
-
-@media only screen and (max-width: 500px) {
-     .responsive {
-          width: 100%;
-     }
+     padding: 0.25rem;
 }
 
 .clearfix:after {
@@ -164,18 +144,16 @@ div.desc {
 
 .container {
      display: grid;
-     gap: 10px 10px;
-     grid-template-columns: auto auto;
-     background-color: white;
+     gap: 10px;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
      padding: 10px;
+     background: #fff;
 }
-
 .container > div {
-     background-color: #f1f1f1;
+     background: #f1f1f1;
      border: 1px solid fuchsia;
      padding: 0.5rem;
 }
-
 .container h3 {
      text-align: center;
 }
@@ -184,6 +162,7 @@ div.desc {
      display: flex;
      justify-content: center;
      align-items: center;
+     width: 100%;
 }
 
 #overview p {
@@ -194,4 +173,26 @@ div.desc {
      display: flex;
      justify-content: center;
      align-items: center;
+}
+
+/* Small screens: tighten spacing and full-width cards */
+@media (max-width: 480px) {
+     nav ul {
+          gap: 0.25rem;
+     }
+     h1 {
+          font-size: 1.6rem;
+     }
+     .desc {
+          font-size: 0.95rem;
+     }
+     .blaster_container {
+          grid-template-columns: repeat(2, 1fr);
+     }
+}
+
+@media (max-width: 360px) {
+     .blaster_container {
+          grid-template-columns: 1fr;
+     }
 }
