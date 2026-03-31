@@ -1,15 +1,13 @@
 <!DOCTYPE html>
+
 <head>
-     <link
-          href="./style.css"
-          rel="stylesheet" />
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="./style.css" rel="stylesheet" />
      <title>Mods| Flip Flop Foam</title>
 </head>
 
 <!-- Google tag (gtag.js) -->
-<script
-     async
-     src="https://www.googletagmanager.com/gtag/js?id=G-ZNLJGL5SE9"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNLJGL5SE9"></script>
 <script>
      window.dataLayer = window.dataLayer || [];
      function gtag() {
@@ -22,62 +20,57 @@
 
 </body>
 <script>
-// Mobile-friendly dropdown toggle (shared)
-document.addEventListener('DOMContentLoaded', function () {
-     var dropdowns = document.querySelectorAll('.dropdown');
-     dropdowns.forEach(function (dd) {
-          var btn = dd.querySelector('.dropbtn');
-          var menu = dd.querySelector('.dropdown-content');
-          if (!btn || !menu) return;
+     // Mobile-friendly dropdown toggle (shared)
+     document.addEventListener('DOMContentLoaded', function () {
+          var dropdowns = document.querySelectorAll('.dropdown');
+          dropdowns.forEach(function (dd) {
+               var btn = dd.querySelector('.dropbtn');
+               var menu = dd.querySelector('.dropdown-content');
+               if (!btn || !menu) return;
 
-          btn.addEventListener('click', function (e) {
-               var isOpen = dd.classList.toggle('open');
-               btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-               e.stopPropagation();
-          });
+               btn.addEventListener('click', function (e) {
+                    var isOpen = dd.classList.toggle('open');
+                    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                    e.stopPropagation();
+               });
 
-          document.addEventListener('click', function () {
-               if (dd.classList.contains('open')) {
-                    dd.classList.remove('open');
-                    btn.setAttribute('aria-expanded', 'false');
-               }
-          });
+               document.addEventListener('click', function () {
+                    if (dd.classList.contains('open')) {
+                         dd.classList.remove('open');
+                         btn.setAttribute('aria-expanded', 'false');
+                    }
+               });
 
-          document.addEventListener('keydown', function (ev) {
-               if (ev.key === 'Escape') {
-                    dd.classList.remove('open');
-                    btn.setAttribute('aria-expanded', 'false');
-               }
+               document.addEventListener('keydown', function (ev) {
+                    if (ev.key === 'Escape') {
+                         dd.classList.remove('open');
+                         btn.setAttribute('aria-expanded', 'false');
+                    }
+               });
           });
      });
-});
 </script>
 <footer></footer>
+
 </html>
-               <ul>
-                    <li class="dropdown">
-                         <a
-                              href="../index.html"
-                              class="dropbtn"
-                              >Blasters</a
-                         >
-                         <div class="dropdown-content">
-                              <a href="./shrew.html">Shrew</a>
-                              <a href="./falx.html">Falx</a>
-                              <a href="./goblin.html">Goblin</a>
-                              <a href="./rush.html">Rush</a>
-                              <a href="./springerperilous.html"
-                                   >Springer Perilous</a
-                              >
-                              <a href="./ogre.html">Ogre</a>
-                              <a href="./booster.html">Booster</a>
-                              <a href="./FLP-03.html">FLP-03</a>
-                         </div>
-                    </li>
-               </ul>
-          </nav>
-     </header>
-     <main></main>
+<ul>
+     <li class="dropdown">
+          <a href="../index.html" class="dropbtn">Blasters</a>
+          <div class="dropdown-content">
+               <a href="./shrew.html">Shrew</a>
+               <a href="./falx.html">Falx</a>
+               <a href="./goblin.html">Goblin</a>
+               <a href="./rush.html">Rush</a>
+               <a href="./springerperilous.html">Springer Perilous</a>
+               <a href="./ogre.html">Ogre</a>
+               <a href="./booster.html">Booster</a>
+               <a href="./FLP-03.html">FLP-03</a>
+          </div>
+     </li>
+</ul>
+</nav>
+</header>
+<main></main>
 </body>
 <footer></footer>
 

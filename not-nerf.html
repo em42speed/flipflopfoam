@@ -1,57 +1,60 @@
 <!DOCTYPE html>
+
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./style.css" rel="stylesheet" />
     <title>Not Nerf | Flip Flop Foam</title>
 </head>
 </body>
 <script>
-// Mobile-friendly dropdown toggle (shared)
-document.addEventListener('DOMContentLoaded', function () {
-    var dropdowns = document.querySelectorAll('.dropdown');
-    dropdowns.forEach(function (dd) {
-        var btn = dd.querySelector('.dropbtn');
-        var menu = dd.querySelector('.dropdown-content');
-        if (!btn || !menu) return;
+    // Mobile-friendly dropdown toggle (shared)
+    document.addEventListener('DOMContentLoaded', function () {
+        var dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(function (dd) {
+            var btn = dd.querySelector('.dropbtn');
+            var menu = dd.querySelector('.dropdown-content');
+            if (!btn || !menu) return;
 
-        btn.addEventListener('click', function (e) {
-            var isOpen = dd.classList.toggle('open');
-            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-            e.stopPropagation();
-        });
+            btn.addEventListener('click', function (e) {
+                var isOpen = dd.classList.toggle('open');
+                btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                e.stopPropagation();
+            });
 
-        document.addEventListener('click', function () {
-            if (dd.classList.contains('open')) {
-                dd.classList.remove('open');
-                btn.setAttribute('aria-expanded', 'false');
-            }
-        });
+            document.addEventListener('click', function () {
+                if (dd.classList.contains('open')) {
+                    dd.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+            });
 
-        document.addEventListener('keydown', function (ev) {
-            if (ev.key === 'Escape') {
-                dd.classList.remove('open');
-                btn.setAttribute('aria-expanded', 'false');
-            }
+            document.addEventListener('keydown', function (ev) {
+                if (ev.key === 'Escape') {
+                    dd.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+            });
         });
     });
-});
 </script>
 <footer>
 </footer>
-</html>
-                <li><a href="../index.html">Blasters</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="hero">
-        <h1 id="title">Flip Flop Foam Factory</h1>
-    </div>
-    <div>
-        <h2>Not Nerf</h2>
-        <p>I've designed some things that aren't Nerf blasters and they're eventually going to be featured here.</p>
-    </div>
-    <div id="featured">
 
-    </div>
+</html>
+<li><a href="../index.html">Blasters</a></li>
+</ul>
+</nav>
+</header>
+<div class="hero">
+    <h1 id="title">Flip Flop Foam Factory</h1>
+</div>
+<div>
+    <h2>Not Nerf</h2>
+    <p>I've designed some things that aren't Nerf blasters and they're eventually going to be featured here.</p>
+</div>
+<div id="featured">
+
+</div>
 
 
 
@@ -59,4 +62,5 @@ document.addEventListener('DOMContentLoaded', function () {
 <footer>
 
 </footer>
+
 </html>
