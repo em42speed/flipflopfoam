@@ -80,6 +80,8 @@ nav a,
 	text-decoration: none;
 	padding: 0.5rem 0.875rem;
 	display: inline-block;
+	line-height: 1.2;
+	vertical-align: middle;
 	border-radius: var(--radius);
 	font-family: var(--font-display);
 	font-size: 0.95rem;
@@ -87,9 +89,17 @@ nav a,
 	background: transparent;
 	border: none;
 	cursor: pointer;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 	transition:
 		background var(--transition),
 		color var(--transition);
+}
+
+.dropbtn::-moz-focus-inner {
+	border: 0;
+	padding: 0;
 }
 
 nav a:hover,
@@ -169,6 +179,14 @@ nav a:hover,
 	margin: 0;
 	letter-spacing: 0.04em;
 	text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.35);
+}
+
+.hero .subtitle {
+	color: var(--color-accent-alt);
+	font-family: var(--font-display);
+	font-size: 1.1rem;
+	margin: 0.4rem 0 0;
+	letter-spacing: 0.02em;
 }
 
 /* --- Typography -------------------------------------------- */
@@ -306,10 +324,26 @@ div.desc a:hover {
 	border: 1px solid var(--color-accent);
 	border-radius: var(--radius);
 	padding: 0.5rem;
+	min-width: 0;
+}
+
+.container p,
+.container a {
+	overflow-wrap: anywhere;
 }
 
 .container li {
 	list-style: none;
+}
+
+.container ul {
+	margin: 0;
+	padding: 0;
+}
+
+.container p,
+.container ul {
+	text-align: center;
 }
 
 /* --- Video & embeds ---------------------------------------- */
