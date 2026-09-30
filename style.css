@@ -4,15 +4,16 @@
 
 /* --- Design tokens ----------------------------------------- */
 :root {
-	--color-primary: #c54b8c; /* vivid purple: nav, headings     */
-	--color-accent: #8a4fff; /* hot pink: highlights, borders   */
+	--color-primary: #c54b8c; /* hot pink: nav, headings     */
+	--color-primary-2: #f7a8d0; /* baby pink: nav, headings */
+	--color-accent: #8a4fff; /* vivid purple: highlights, borders   */
 	--color-accent-alt: #c3bef7; /* soft lavender: hover states     */
 	--color-bg: #e5ecf4; /* light blue-grey: page bg        */
 	--color-surface: #effffa; /* near-white mint: cards          */
 	--color-border: #c3bef7; /* lavender: card borders          */
 	--color-text: #1e1e2e; /* near-black: body text           */
 	--color-text-muted: #6e7979; /* muted teal-grey: secondary text */
-	--color-nav-bg: #c54b8c; /* vivid purple: nav background    */
+	--color-nav-bg: #c54b8c; /* hot pink: nav background    */
 	--color-nav-link: #effffa; /* near-white mint: nav links      */
 
 	--font-display: Rockwell, "Rockwell Nova", "Courier Bold", Georgia, serif;
@@ -166,7 +167,7 @@ nav a:hover,
 
 /* --- Hero -------------------------------------------------- */
 .hero {
-	background: var(--color-primary);
+	background: var(--color-primary-2);
 	padding: 2rem 1rem 1.75rem;
 	text-align: center;
 	border-bottom: 4px solid var(--color-accent-alt);
@@ -182,7 +183,7 @@ nav a:hover,
 }
 
 .hero .subtitle {
-	color: var(--color-accent-alt);
+	color: var(--color-accent);
 	font-family: var(--font-display);
 	font-size: 1.1rem;
 	margin: 0.4rem 0 0;
