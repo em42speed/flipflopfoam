@@ -1,5 +1,5 @@
 /* ============================================================
-   Flip Flop Foam Factory — style.css
+   FlipFlopFoamFactory — style.css
    ============================================================ */
 
 /* --- Design tokens ----------------------------------------- */
@@ -73,6 +73,10 @@ nav ul {
 	align-items: center;
 	flex-wrap: wrap;
 	min-height: 3rem;
+}
+
+nav ul li:last-child {
+	margin-left: auto;
 }
 
 nav a,
@@ -188,6 +192,23 @@ nav a:hover,
 	font-size: 1.1rem;
 	margin: 0.4rem 0 0;
 	letter-spacing: 0.02em;
+}
+
+/* --- Business card page: larger text ------------------------ */
+body.card-page .hero .subtitle {
+	font-size: 1.3rem;
+}
+
+body.card-page .container h3 {
+	font-size: 1.3rem;
+}
+
+body.card-page .container p {
+	font-size: 1.2rem;
+}
+
+body.card-page .btn {
+	font-size: 1.25rem;
 }
 
 /* --- Typography -------------------------------------------- */
@@ -335,6 +356,32 @@ div.desc a:hover {
 
 .container li {
 	list-style: none;
+}
+
+.btn {
+	display: inline-block;
+	margin: 0.25rem 0;
+	padding: 0.75rem 1.75rem;
+	background: var(--color-primary);
+	color: #fff;
+	font-family: var(--font-display);
+	font-size: 1.05rem;
+	font-weight: bold;
+	letter-spacing: 0.02em;
+	text-decoration: none;
+	border-radius: var(--radius);
+	box-shadow: var(--shadow-card);
+	transition:
+		background var(--transition),
+		box-shadow var(--transition),
+		transform var(--transition);
+}
+
+.btn:hover {
+	background: var(--color-accent);
+	color: #fff;
+	box-shadow: var(--shadow-hover);
+	transform: translateY(-2px);
 }
 
 .container ul {
